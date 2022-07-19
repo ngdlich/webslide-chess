@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
+
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/webslides/webslides
+
+      Thanks!
+    -->
+
+    <!-- SEO -->
+    <title>Chiếu Vua và Phòng thủ nước chiếu</title>
+    <meta name="description" content="WebSlides Cheat Sheet. A quick reference guide for beginners. This tutorial contains hundreds of HTML/CSS examples.">
+
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/permalink"> -->
+
+    <!-- Chess -->
+    <link rel="stylesheet" type="text/css" href="https://pgn.chessbase.com/CBReplay.css"/>
+    <script src="https://pgn.chessbase.com/jquery-3.0.0.min.js"></script>
+    <script src="https://pgn.chessbase.com/cbreplay.js" type="text/javascript"></script>    
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="../static/css/webslides.css">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/svg-icons.css">
+
+    <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+
+    <!-- FACEBOOK -->
+    <meta property="og:url" content="http://your-url.com/permalink" /> <!-- YOUR URL/PERMALINK -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="WebSlides Documentation: Classes" /> <!-- EDIT -->
+    <meta property="og:description" content="A quick reference guide. This tutorial contains hundreds of HTML/CSS examples."> <!-- EDIT -->
+    <meta property="og:updated_time" content="2017-01-04T17:23:46"> <!-- EDIT -->
+    <meta property="og:image" content="../static/images/share-webslides.jpg" > <!-- EDIT -->
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@webslides"> <!-- EDIT -->
+    <meta name="twitter:creator" content="@jlantunez"> <!-- EDIT -->
+    <meta name="twitter:title" content="WebSlides Documentation: Classes"> <!-- EDIT -->
+    <meta name="twitter:description" content="WebSlides Cheat Sheet.This tutorial contains hundreds of HTML/CSS examples."> <!-- EDIT -->
+    <meta name="twitter:image" content="../static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="../static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="../static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="../static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="../static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="../static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="../static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="../static/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+
+    <!-- DATA -->
+    <script language="javascript">
+      var datafen = new Array(
+        "3k4/8/8/4K3/R7/8/8/8 w KQkq - 0 1",
+        "8/7p/1p2pkp1/8/4PP2/5KP1/1P6/8 w - - 0 1",
+        "6k1/5p2/4pb2/8/8/7P/5P2/3R3K w - - 0 1",
+        "5k2/5p2/3q2p1/2p5/8/2Q2N1P/6P1/6K1 w - - 0 1",
+        "8/3r2kp/5p2/3P4/4P1KP/4N3/8/8 w - - 0 1",
+        "6k1/5p2/6p1/8/2Bn3P/6P1/8/6K1 b - - 0 1",
+        "3b4/1b4k1/p5p1/P7/8/1N4N1/2r4P/R5K1 b - - 0 1",
+        "6k1/5p2/4b2p/8/8/8/r4PK1/1RR5 w KQkq - 0 1",
+        "5nk1/6pp/3p4/8/3P2P1/3B2K1/5P2/8 w KQkq - 0 1",
+        //phong thu nuoc chieu
+        "3k4/8/8/4K3/3R4/8/8/8 b - - 0 1",
+        "4k3/4q3/8/8/8/8/R7/2R1K3 w - - 0 1",
+        "8/4k3/8/1R2n3/8/3K4/8/8 w - - 0 1",
+        "4k3/4q3/8/8/8/B7/R7/4K3 w KQkq - 0 1",
+        "5r1k/6p1/8/3Q4/8/4q2p/6KP/3R4 w - - 0 1",
+        "7r/5pk1/8/8/8/5bP1/1R3PK1/r7 w - - 0 1",
+        "8/6k1/4b3/1P4p1/8/2P3PK/r6P/1R6 w - - 0 1",
+        "8/6k1/8/8/3p1Bp1/4n1P1/2r2K2/6R1 w - - 0 1",
+        "6k1/6p1/1q2b3/8/4P3/4K3/8/B5Q1 w - - 0 1",
+        "8/1R3pk1/8/4b3/8/5B1P/6PK/r7 w - - 0 1",
+        "6k1/1R6/1P6/7p/5Pb1/6PK/r7/8 w - - 0 1",
+        "1r6/6pk/8/8/3p4/P1n3P1/K3N3/B7 w - - 0 1",
+        "4r1k1/6p1/5n2/8/8/4bp2/2N4P/5BKR w - - 0 1",
+        "5k1Q/5p2/8/5P1p/8/5qP1/7P/6K1 b - - 0 1",
+        "4r1bk/7p/8/4B3/3P3P/5BP1/6K1/8 b - - 0 1",
+        "3R4/5ppk/1r6/7Q/8/7P/5qP1/7K b - - 0 1",
+        "","","","","","","","","","","","","","","","","","","",);
+  </script>
+
+    <main role="main">
+      <article id="webslides">
+
+        <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+
+        <section class="bg-light aligncenter">
+          <span class="background light" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <!--.wrap = container (width: 90%) with fadein animation -->
+          <div class="wrap">
+            <h1 class="text-landing">CHIẾU VUA</h1>
+            <h1 class="text-landing">PHÒNG THỦ NƯỚC CHIẾU</h1>
+            <p class="text-symbols">* * * </p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Chiếu Vua</strong></h2>
+              <div id="b1" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 2</strong></h2>
+              <div id="b2" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 3</strong></h2>
+              <div id="b3" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 4</strong></h2>
+              <div id="b4" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 5</strong></h2>
+              <div id="b5" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 6</strong></h2>
+              <div id="b6" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 7</strong></h2>
+              <div id="b7" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 8</strong></h2>
+              <div id="b8" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 9</strong></h2>
+              <div id="b9" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="bg-light aligncenter">
+          <span class="background light" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <!--.wrap = container (width: 90%) with fadein animation -->
+          <div class="wrap">
+            <h1 class="text-landing">PHÒNG THỦ NƯỚC CHIẾU</h1>
+            <p class="text-symbols">* * * </p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Cách 1: Chạy Vua đến vị trí an toàn</strong></h2>
+              <div id="b10" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Cách 2: Chắn đường chiếu</strong></h2>
+              <div id="b11" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Cách 3: Ăn quân đang chiếu</strong></h2>
+              <div id="b12" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Lưu ý: Cần chọn cách tốt nhất</strong></h2>
+              <div id="b13" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 14</strong></h2>
+              <div id="b14" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 15</strong></h2>
+              <div id="b15" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 16</strong></h2>
+              <div id="b16" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 17</strong></h2>
+              <div id="b17" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 18</strong></h2>
+              <div id="b18" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 19</strong></h2>
+              <div id="b19" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 20</strong></h2>
+              <div id="b20" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 21</strong></h2>
+              <div id="b21" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+
+        <section class="fullscreen">
+          <span class="background" style="background-image:url('../static/images/bg1.jpg')"></span>
+          <span class="wrap background-right-bottom" style="background-image:url('../static/images/Login\ -\ ChessKid_com.gif'); margin-bottom: 5rem;"></span>          
+          <div class="wrap aligncenter" style="font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif; color: blue;">
+              <h2><strong>Bài 22</strong></h2>
+              <div id="b22" class="cbdiagram" data-size="707" data-bigcoords="true" data-fen="">
+              </div>
+          </div>
+        </section>
+        
+
+      </article>
+    </main>
+    <!--main-->
+
+    <!-- Required -->
+    <script src="../static/js/webslides.js"></script>
+
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+<script language="javascript">
+  var dataSize = screen.availHeight;
+  document.getElementById("b1").setAttribute("data-fen", datafen[0]);
+  document.getElementById("b2").setAttribute("data-fen", datafen[1]);
+  document.getElementById("b3").setAttribute("data-fen", datafen[2]);
+  document.getElementById("b4").setAttribute("data-fen", datafen[3]);
+  document.getElementById("b5").setAttribute("data-fen", datafen[4]);
+  document.getElementById("b6").setAttribute("data-fen", datafen[5]);
+  document.getElementById("b7").setAttribute("data-fen", datafen[6]);
+  document.getElementById("b8").setAttribute("data-fen", datafen[7]);
+  document.getElementById("b9").setAttribute("data-fen", datafen[8]);
+  document.getElementById("b10").setAttribute("data-fen", datafen[9]);
+  document.getElementById("b11").setAttribute("data-fen", datafen[10]);
+  document.getElementById("b12").setAttribute("data-fen", datafen[11]);
+  document.getElementById("b13").setAttribute("data-fen", datafen[12]);
+  document.getElementById("b14").setAttribute("data-fen", datafen[13]);
+  document.getElementById("b15").setAttribute("data-fen", datafen[14]);
+  document.getElementById("b16").setAttribute("data-fen", datafen[15]);
+  document.getElementById("b17").setAttribute("data-fen", datafen[16]);
+  document.getElementById("b18").setAttribute("data-fen", datafen[17]);
+  document.getElementById("b19").setAttribute("data-fen", datafen[18]);
+  document.getElementById("b20").setAttribute("data-fen", datafen[19]);
+  document.getElementById("b21").setAttribute("data-fen", datafen[20]);
+  document.getElementById("b22").setAttribute("data-fen", datafen[21]);
+  document.getElementById("b23").setAttribute("data-fen", datafen[22]);
+  document.getElementById("b24").setAttribute("data-fen", datafen[23]);
+  document.getElementById("b25").setAttribute("data-fen", datafen[24]);
+  document.getElementById("b26").setAttribute("data-fen", datafen[25]);
+  // document.getElementById("b27").setAttribute("data-fen", datafen[26]);
+  // document.getElementById("b28").setAttribute("data-fen", datafen[27]);
+  // document.getElementById("b29").setAttribute("data-fen", datafen[28]);
+  // document.getElementById("b30").setAttribute("data-fen", datafen[29]);
+</script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="../static/js/svg-icons.js"></script>
+
+  </body>
+</html>
